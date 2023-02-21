@@ -1,0 +1,26 @@
+1.
+echo "This is the content of my file" > myfile.txt
+cat /etc/* > output.txt 2> errors.txt
+
+
+2.
+ls -l
+ls -l | cut -c 1-10
+ls -l | cut -c 1-10 | sort | uniq
+
+
+3.
+sudo sed -i 's/^PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo systemctl reload sshd
+cat > file_name
+Sigint сигнал передадим
+
+
+4.
+mc
+ps aux | grep mc
+ps aux | grep mc | awk '{ print $2 }'
+sudo kill -9 PID
+
+
