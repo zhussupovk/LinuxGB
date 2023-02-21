@@ -1,0 +1,27 @@
+1. Управление пользователями:
+a) создать нового пользователя;
+sudo useradd username
+
+b) убедиться, что информация о нем появилась в соответствующих файлах в системе;
+grep username /etc/passwd /etc/shadow /etc/group
+
+c) удалить созданного пользователя;
+sudo userdel username
+
+2. Управление группами:
+a) создать группу;
+sudo groupadd groupname
+
+b) попрактиковаться в смене групп у пользователей;
+sudo usermod -g groupname username
+
+c) добавить пользователя в группу, не меняя основной;
+sudo usermod -g groupname username
+
+d) удалить пользователя из группы.
+sudo gpasswd -d username groupname
+
+3. Создать пользователя с правами суперпользователя. Проверить результат.
+sudo usermod -aG sudo username
+su - username
+sudo <command>
